@@ -69,17 +69,17 @@ select count(*) from Billing
 where paymentStatus = 'Paid';
 
 -- 16. Adding a FitnessClass 
-INSERT INTO FitnessClass(trainerID, classDate, classTime, duration, fitnessType, roomLocation) 
-VALUES (1, '2022-01-03', '10:00:00', 60, 'Yoga', 'Room 1');
+insert into FitnessClass(trainerID, classDate, classTime, duration, fitnessType, roomLocation) 
+values (1, '2022-01-03', '10:00:00', 60, 'Yoga', 'Room 1');
 
 -- 17. Add all members to the fitness class
-INSERT INTO MembersFitnessClass(memberID, classID)
-SELECT memberID, 1
-FROM Members;
+insert into MembersFitnessClass(memberID, classID)
+select memberID, 1
+from Members;
 
 -- 18. Get the number of members in the fitness class
-SELECT count(*) FROM MembersFitnessClass
-WHERE classID = 1;
+select count(*) from MembersFitnessClass
+where classID = 1;
 
 
 
